@@ -15,7 +15,9 @@ function App() {
   }
 
   const totalValue = list.reduce((currentTotal, total) => {
-    return currentTotal + Number(total.value)
+    if(total.type == "Entrada") {
+      return currentTotal + Number(total.value)
+    } return currentTotal - Number(total.value)
   }, 0)
 
   return (
