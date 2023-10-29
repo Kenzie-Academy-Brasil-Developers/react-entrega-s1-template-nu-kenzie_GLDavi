@@ -1,13 +1,13 @@
 export const RenderCard = ({item, deleteList}) => {
     return (
         <>
-            <li>
-                <p>{item.description}</p>
-                <span>
-                    <p>{item.type}</p>
-                    <p>{`R$ ${item.value}`}</p>
+            <li className="cards-li">
+                <p className="financial-description">{item.description}</p>
+                <span className="financial-values">
+                    <p className="financial-type">{item.type}</p>
+                    <p className="financial-value">{`R$ ${item.value}`}</p>
                 </span>
-                <button onClick={() => deleteList(item.id)}>Excluir</button>
+                <button onClick={() => deleteList(item.id)} className="delete-button">Excluir</button>
             </li>   
         </>
     )
